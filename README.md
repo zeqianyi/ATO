@@ -24,12 +24,12 @@ Download the cifar_teachers.tar and untar it to ./download_ckpts via tar xvf cif
 
 ### Training
 
-```python tools/train.py --cfg configs/cifar100/kd/resnet32x4_resnet8x4.yaml --adaptive-temperature --base-temp 2 --lambda_threshold 0.3```
+```python tools/train.py --cfg configs/cifar100/kd/vgg13_MobileNetV2.yaml --adaptive-temperature --base-temp 2.5 --lambda_threshold 0.6```
 
 ### Results
 
-| Dataset   | Teacher  | Student  | Acc@1  |
-| --------- | -------- | -------- | ------ |
-| CIFAR-100 | wrn_40_2 | wrn_16_2 | 75.62% |
+| Dataset   | Teacher  |   Student   | Acc@1  |
+| --------- | -------- | ------------| ------ |
+| CIFAR-100 |  vgg13   | MobileNetV2 | 68.75% |
 
 ### 
