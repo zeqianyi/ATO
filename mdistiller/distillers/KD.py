@@ -31,7 +31,7 @@ def l1_norm(output_teacher_p, output_student_p):
 
 
 def threshold_low_compute(logits_student_in, logits_teacher_in,T):
-    # 计算 L1 范数
+    # compute L1 norm
     logits_student = logits_student_in
     logits_teacher = logits_teacher_in
     pred_teacher = F.softmax(logits_teacher / T, dim=1)
@@ -40,7 +40,7 @@ def threshold_low_compute(logits_student_in, logits_teacher_in,T):
 
     l1_norm = torch.norm(pred_teacher - pred_student, p=1) / batch_size
     l1_norm_squared = (l1_norm ** 2)
-    threshold_low = 0.5 * l1_norm_squared  # 乘以 1/2
+    threshold_low = 0.5 * l1_norm_squared  
 
     return threshold_low
 
