@@ -23,7 +23,7 @@ tensorboardX
 
 Download CIFAR-100 dataset to ./data
 
-Download the cifar_teachers.tar and untar it to ./download_ckpts via tar xvf cifar_teachers.tar.
+Download the [cifar_teachers.tar](https://github.com/megvii-research/mdistiller/releases/tag/checkpoints) and untar it to ./download_ckpts via tar xvf cifar_teachers.tar.
 
 ### Training
 
